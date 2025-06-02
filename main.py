@@ -69,13 +69,13 @@ private_data_file = 'private_data.csv'
     
 public_results_df = cluster_data(public_data_file, is_public_data=True)
 if public_results_df is not None:
-    public_output_file = 'r13922022_public.csv'
+    public_output_file = 'public_submission.csv'
     public_results_df.to_csv(public_output_file, index=False)
     print(f"Cluster assignments for public data saved to {public_output_file}")
 
 
 private_results_df = cluster_data(private_data_file, is_public_data=False)
 if private_results_df is not None:
-    private_output_file = 'r13922022_private.csv'
+    private_output_file = 'private_submission.csv'
     private_results_df.to_csv(private_output_file, index=False)
     print(f"\nCluster assignments for private data saved to {private_output_file}")
